@@ -4,7 +4,9 @@
 	<form method="post">
 
 	<?php
-
+/**
+ * Use the differents functions from factorh.php and functions.php
+ */
 	$factory = new factory();
 	$functions = new functions();
 
@@ -27,6 +29,10 @@
 
 	<?php
 
+    /**
+     *
+     *
+     */
 	$factory->createInputText("backInSeconds", "Entrez un nombre de secondes");
 	$factory->createSubmitButton();
 	if (!empty($_POST["backInSeconds"])) {
@@ -42,6 +48,11 @@
 	<form method="post">
 
 	<?php
+
+    /**
+     *this three calls from factory.php is for the lowest number between the 3 numbers.
+     *
+     */
 
 	$factory->createInputText("first_number", "Premier nombre");
 	$factory->createInputText("second_number", "Deuxième nombre");
@@ -64,6 +75,11 @@
 
 	<?php
 
+    /**
+     * Calling the function who convert the arabian numbers in romanian numbers
+     *
+     */
+
 	$factory->createInputText("romanNumber", "Entrez un nombre entre 1 et 9999");
 	$factory->createSubmitButton();
 
@@ -80,7 +96,10 @@
 	<form method="post">
 
 	<?php
-
+/**
+ * Calling the function who found the factorial number
+ *
+ */
 	$factory->createInputText("factorialNumber", "Entrez un nombre");
 	$factory->createSubmitButton();
 
@@ -98,6 +117,10 @@
 
 	<?php
 
+    /**
+     * Calling the function who change de decimal numbers in hexadecimal numbers
+     *
+     */
 	$factory->createInputText("decimalNumber", "Entrez un nombre");
 	$factory->createSubmitButton();
 
@@ -115,6 +138,9 @@
 
 	<?php
 
+    /**
+     * Calling the function who change de decimal numbers in binary
+     */
 	$factory->createInputText("binaryNumber", "Entrez un nombre");
 	$factory->createSubmitButton();
 
@@ -132,6 +158,11 @@
 
 	<?php
 
+    /**
+     * This function allow to check if the user email it's correct (more than 3 letters before @ and an at at the end of the mail.
+     * This function saves the informations in the database.
+     *
+     */
 	$factory->createInputText("checkMailInput", "Entrez une adresse email");
 	$factory->createInputDate("checkDateInput", "Choisissez une date");
 	$factory->createSubmitButton();
@@ -165,6 +196,9 @@
 
 	<?php
 
+    /**
+     * Calling the function who sort the names with the second letter of the names
+     */
 	$factory->createTextArea("peopleNames", "Entrez plusieurs noms séparés par des virgules");
 	$factory->createSubmitButton();
 

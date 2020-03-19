@@ -1,8 +1,16 @@
 <?php
 
+/**
+ * Class Functions
+ */
 class Functions {
 
-	public function getPrimeNumbers($n) {
+    /**
+     * This function calculate all prime numbers with variable $n
+     * @param $n
+     * @return array
+     */
+    public function getPrimeNumbers($n) {
 		$primeNumbersArray = array();
 
 		 $negatif = false;
@@ -28,6 +36,13 @@ class Functions {
             return $primeNumbersArray;
 	}
 
+    /**
+     * The next function show us the lowest number between the 3 numbers
+     * @param $first_n
+     * @param $second_n
+     * @param $third_n
+     * @return mixed
+     */
     public function getLowestNumber($first_n, $second_n, $third_n) {
         $numbersArray = array();
         foreach (func_get_args() as $arg) {
@@ -37,12 +52,22 @@ class Functions {
         return min($numbersArray);
     }
 
+    /**
+     *
+     * @param $seconds
+     * @return false|string
+     */
     public function goBackInTime($seconds) {
         $now = strtotime("now");
         $time = date("d-m-Y", $now - $seconds);
         return $time;
     }
 
+    /**
+     * Change the arabian numbers into romanian numbers
+     * @param $number
+     * @return mixed|string
+     */
     public function getRomanNumber($number) {
 
         // 1 à 9
@@ -76,6 +101,11 @@ class Functions {
 
     }
 
+    /**
+     * With this function we can found all the factorial numbers gmp_fact() it's a php function
+     * @param $number
+     * @return GMP|int|resource
+     */
     public function getFactorial($number) {
 
         if ($number >= 1) {
@@ -86,14 +116,28 @@ class Functions {
         }
     }
 
+    /**
+     * change the decimal numbers into hexadecimal number
+     * @param $number
+     * @return string
+     */
     public function getDecimal($number) {
         return dechex($number);
     }
 
+    /**
+     * change the decimal number in binary
+     * @param $number
+     * @return string
+     */
     public function getBinary($number) {
         return decbin($number);
     }
 
+    /**
+     *With this function you can order the names by alphabetical order with the second letter of the names
+     * @param $names
+     */
     public function orderNamesBySecondCharacter($names) {
         $namesArray = explode(",", $names);
         $newArray1 = array();

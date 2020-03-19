@@ -1,12 +1,42 @@
 <?php
+
+/**
+ * Class DatabaseConnection
+ */
 class DatabaseConnection{
+    /**
+     * @var
+     */
     private $_dbType;
+    /**
+     * @var
+     */
     private $_dbName;
+    /**
+     * @var
+     */
     private $_dbAddress;
+    /**
+     * @var
+     */
     private $_dbUser;
+    /**
+     * @var
+     */
     private $_dbPassword;
+    /**
+     * @var
+     */
     public $_database;
 
+    /**
+     * DatabaseConnection constructor.
+     * @param $dbType
+     * @param $dbName
+     * @param $dbAddress
+     * @param $dbUserName
+     * @param $pwd
+     */
     public function __construct($dbType, $dbName, $dbAddress, $dbUserName, $pwd){
         $this->_dbType = $dbType;
         $this->_dbName = $dbName;
@@ -16,6 +46,9 @@ class DatabaseConnection{
         $this->connectToDatabase();
     }
 
+    /**
+     *With this function we connected our script on the database PhpMyAdmin
+     */
     private function connectToDatabase(){
         try {
             if($this->_database === null){
@@ -28,6 +61,12 @@ class DatabaseConnection{
         }
     }
 
+    /**
+     * The function getAllRows allows us to show the differents rows of our database
+     * @param $tableName
+     * @param $columns
+     * @return array
+     */
     public function getAllRows($tableName, $columns){
     	$rows = array();
         $request = "SELECT " . $columns . " FROM " . $tableName;

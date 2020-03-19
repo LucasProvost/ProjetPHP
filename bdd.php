@@ -18,9 +18,17 @@
 
 	<?php
 
+    /*
+     *
+     *
+     */
 	$factory = new factory();
 	$functions = new functions();
 
+	/**
+	 *Caught the diferents functions from factory.php and functions.php
+	 *
+	 */
 	$database = new databaseconnection("mysql", "semainephp", "127.0.0.1", "guillaume", "coding");
 
 	?>
@@ -60,6 +68,11 @@
 	$factory->createInputText("address", "Adresse");
 	$factory->createInputDate("birth_date", "Date de naissance");
 
+
+	/**
+	 *Catch the diferents informations from the user and post them into the database sql.
+	 *
+	 */
 	$factory->createSubmitButton();
 
 	if(!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST["gender"]) && !empty($_POST["email"]) && !empty($_POST["address"]) && !empty($_POST["birth_date"]) ){
