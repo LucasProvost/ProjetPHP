@@ -36,6 +36,12 @@ class Functions {
         
         return min($numbersArray);
     }
+
+    public function goBackInTime($seconds) {
+        $now = strtotime("now");
+        $time = date("d-m-Y", $now - $seconds);
+        return $time;
+    }
 }
 
 ?>

@@ -36,6 +36,23 @@ require 'class/databaseconnection.php';
 			echo $result . ' 	';
 		}
 	}
+
+	?>
+
+	</form>
+
+	<hr>
+	<h3>Story 4 : Retour dans le passé</h3>
+	<form method="post">
+
+	<?php
+
+	$factory->createInputText("backInSeconds", "Entrez un nombre de secondes");
+	$factory->createSubmitButton();
+	if (!empty($_POST["backInSeconds"])) {
+		echo "L'évenement a eu lieu le : " . $functions->goBackInTime($_POST["backInSeconds"]);
+	}
+
 	?>
 
 	</form>
