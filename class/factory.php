@@ -10,9 +10,16 @@ class Factory {
 	}
 
 	public function createTextArea($label, $text) {
-		echo '<div class="centerColumn inputText">';
+		echo '<div class="centerColumn">';
 		echo '<label for="'. $label . '">'. $text . '</label>';
 		echo '<textarea name="'. $label . '" id="'. $label . '" rows="5"></textarea>';
+		echo '</div>';
+	}
+
+	public function createInputDate($label, $text) {
+		echo '<div class="centerColumn">';
+		echo '<label for="'. $label . '">'. $text . '</label>';
+		echo '<input type="date" name="'. $label . '" id="'. $label . '"></input>';
 		echo '</div>';
 	}
 

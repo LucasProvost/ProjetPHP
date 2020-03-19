@@ -49,7 +49,7 @@ textarea, input {
 	text-align: center;
 }
 
-input {
+input, textarea {
 	background-color: #264669;
 	color: white;
 }
@@ -60,6 +60,10 @@ input {
 
 .inputSubmit {
 	width: 10%;
+}
+
+.inputTextArea {
+	width: 50%;
 }
 
 footer {

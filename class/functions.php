@@ -75,6 +75,55 @@ class Functions {
         return $roman;
 
     }
+
+    public function getFactorial($number) {
+
+        if ($number >= 1) {
+            return gmp_fact($number);
+        }
+        else if (is_null($number)) {
+            return 1;
+        }
+    }
+
+    public function getDecimal($number) {
+        return dechex($number);
+    }
+
+    public function getBinary($number) {
+        return decbin($number);
+    }
+
+    public function orderNamesBySecondCharacter($names) {
+        $namesArray = explode(",", $names);
+        $newArray1 = array();
+        $firstLetterArray = array();
+        $withoutLetterArray = array();
+
+        foreach($namesArray as $name) {
+            $newArray1[$name] = $name;
+            $withoutLetterArray[$name] = substr_replace($name, "", 0, 1);
+        }
+
+        foreach ($newArray1 as $name) {
+            $firstLetterArray[$name] = $name{0};
+        }
+
+        asort($withoutLetterArray, SORT_STRING);
+
+        /*var_dump($newArray1);
+        echo "</br>";
+        var_dump($firstLetterArray);
+        echo "</br>";
+        var_dump($withoutLetterArray);
+        echo "</br>";*/
+        $i = 0;
+        foreach ($withoutLetterArray as $key => $value) {
+            $i++;
+            $value = $key{0} . $value;
+            echo "[ ". $i . " ] " . $value . "</br>";
+        }
+    }
 }
 
 ?>
