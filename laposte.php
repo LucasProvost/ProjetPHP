@@ -167,3 +167,5 @@ require 'class/databaseconnection.php';
 		<p>Copyright 2020</p>
 	</footer>
 </html>
+<?php include_once 'header.php';?>
+<?php include_once 'footer.php';?>

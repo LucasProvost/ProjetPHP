@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link href="assets/style.css" rel="stylesheet">
-</head>
+<?php include_once 'header.php';?>
 
 	<?php
 	require 'class/factory.php';
