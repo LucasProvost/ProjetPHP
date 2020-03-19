@@ -56,9 +56,7 @@
 	</form>
 
 	<hr>
-	
 
-	<hr>
 	<h3>Story 6 : Nombre en chiffres romains</h3>
 	<form method="post">
 
