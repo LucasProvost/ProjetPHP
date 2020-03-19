@@ -85,6 +85,24 @@ require 'class/databaseconnection.php';
 	}
 
 	?>
+
+	<hr>
+	<h3>Story 6 : Nombre en chiffres romains</h3>
+	<form method="post">
+
+	<?php
+
+	$factory->createInputText("romanNumber", "Entrez un nombre entre 1 et 9999");
+	$factory->createSubmitButton();
+
+	if (!empty($_POST["romanNumber"])) {
+		echo $functions->getRomanNumber($_POST["romanNumber"]);
+	}
+
+	?>
+
+	</form>
+
 	</div>
 
 </body>
