@@ -27,6 +27,7 @@ class Factory {
 		echo '<div class="centerColumn">';
 		echo '<label for="'. $label . '">'.$text.'</label>';
 		echo '<select name="'. $label . '" id="'. $label . '">';
+		echo '<option value="" selected></option>';
 		foreach ($values as $value) {
 			echo '<option value="'. $value . '">'. $value . '</option>';
 		}
@@ -42,6 +43,11 @@ class Factory {
   		echo '<input type="radio" id="triceratops" name="dinotype" value="triceratops">';
   		echo '<label for="triceratops">Triceratops</label>';
 		echo '</div>';
+	}
+
+	public function createInputCheckbox($label, $text) {
+		echo '<label for="'. $label . '">'. $text . '</label>';
+		echo '<input type="checkbox" name="'. $label . '">';
 	}
 
 	public function createSubmitButton() {

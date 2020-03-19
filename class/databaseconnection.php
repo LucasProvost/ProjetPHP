@@ -5,7 +5,7 @@ class DatabaseConnection{
     private $_dbAddress;
     private $_dbUser;
     private $_dbPassword;
-    private $_database;
+    public $_database;
 
     public function __construct($dbType, $dbName, $dbAddress, $dbUserName, $pwd){
         $this->_dbType = $dbType;

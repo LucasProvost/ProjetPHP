@@ -74,6 +74,19 @@ footer {
     width: 100%;
 }
 
+.darkBg {
+	background-color: #264669;
+	color: white;
+}
+
+.whiteBg {
+	background-color: lightgrey;
+}
+
+img {
+	width: 65%;
+}
+
 #members {
 	display: flex;
 	flex-direction: line;
@@ -87,4 +100,103 @@ footer {
 
 #members h1:hover {
 	color: #264669;
+}
+
+ /* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: red;
+}
+
+.top-left {
+  position: absolute;
+  top: 600px;
+  left: 400px;
+}
+
+.top-right {
+  position: absolute;
+  top: 600px;
+  right: 400px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 75px;
+  right: 400px;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 75px;
+  left: 400px;
+}
+
+#envelopeStamp {
+	width: 200px;
+}
+
+#envelopeConfidential {
+	width: 200px;
+}
+
+#envelopeDot {
+	width: 125px;
+}
+
+.top-left2 {
+  position: absolute;
+  top: 7%;
+  left: 33%;
+}
+
+.top-left3 {
+  position: absolute;
+  top: 10%;
+  left: 33%;
+}
+
+.top-left4 {
+  position: absolute;
+  top: 13%;
+  left: 33%;
+}
+
+.top-right2 {
+  position: absolute;
+  top: 16%;
+  right: 33%;
+}
+
+.top-right3 {
+  position: absolute;
+  top: 19%;
+  right: 33%;
+}
+
+.top-right4 {
+  position: absolute;
+  top: 22%;
+  right: 33%;
+}
+
+.top-bottom1 {
+	position: absolute;
+  top: 75%;
+  left: 34%; 
+}
+
+.letterText {
+	position: absolute;
+	top: 30%;
+	left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 600px;
+}
+
+#paper {
+	width: 60%;
 }
