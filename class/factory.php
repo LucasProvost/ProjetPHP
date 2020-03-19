@@ -23,9 +23,9 @@ class Factory {
 		echo '</div>';
 	}
 
-	public function createInputCombo($label, $values) {
+	public function createInputCombo($label, $text, $values) {
 		echo '<div class="centerColumn">';
-		echo '<label for="'. $label . '">Nom du dinosaure</label>';
+		echo '<label for="'. $label . '">'.$text.'</label>';
 		echo '<select name="'. $label . '" id="'. $label . '">';
 		foreach ($values as $value) {
 			echo '<option value="'. $value . '">'. $value . '</option>';
