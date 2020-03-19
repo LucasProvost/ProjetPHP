@@ -57,14 +57,6 @@
 
 	<hr>
 	
-	<?php
-
-	$database = new databaseconnection("mysql", "semainephp", "127.0.0.1", "guillaume", "coding");
-	foreach ($database->getAllRows("dinosaurs", "name") as $result) {
-		echo $result . "</br>";
-	}
-
-	?>
 
 	<hr>
 	<h3>Story 6 : Nombre en chiffres romains</h3>
