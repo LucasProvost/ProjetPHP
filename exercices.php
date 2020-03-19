@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<link href="assets/style.css" rel="stylesheet">
-</head>
-
-<?php
-require 'class/factory.php';
-require 'class/functions.php';
-require 'class/databaseconnection.php';
-?>
-
-<nav>
-	<a href="index.php">Accueil</a>
-	<a href="exercices.php">Exercices</a>
-	<a href="bdd.php">BDD</a>
-	<a href="laposte.php">La Poste</a>
-</nav>
-
-<body>
+<?php include_once 'header.php';?>
 
 	<h3>Story 3 : Nombres entiers jusqu'à N</h3>
 	<form method="post">
@@ -205,11 +185,5 @@ require 'class/databaseconnection.php';
 	</form>
 
 	</div>
-
-</body>
-
-<footer>
-	<p>Copyright 2020</p>
-</footer>
-
-</html>
+	
+	<?php include_once 'footer.php';?>
