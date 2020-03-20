@@ -1,29 +1,53 @@
 <?php
 
+/**
+ * Class Factory
+ */
 class Factory {
 
-	public function createInputText($label, $text) {
+    /**
+     * This function allow to create a input text.
+     * @param $label
+     * @param $text
+     */
+    public function createInputText($label, $text) {
 		echo '<div class="centerColumn">';
 		echo '<label for="'. $label . '">'. $text . '</label>';
 		echo '<input type="text" class="inputText" name="'. $label . '" id="'. $label . '"></input>';
 		echo '</div>';
 	}
 
-	public function createTextArea($label, $text) {
+    /**
+     *createTextArea creating a block where we can input texte
+     * @param $label
+     * @param $text
+     */
+    public function createTextArea($label, $text) {
 		echo '<div class="centerColumn">';
 		echo '<label for="'. $label . '">'. $text . '</label>';
 		echo '<textarea name="'. $label . '" id="'. $label . '" rows="5"></textarea>';
 		echo '</div>';
 	}
 
-	public function createInputDate($label, $text) {
+    /**
+     * createInputDate allow to choice a date
+     * @param $label
+     * @param $text
+     */
+    public function createInputDate($label, $text) {
 		echo '<div class="centerColumn">';
 		echo '<label for="'. $label . '">'. $text . '</label>';
 		echo '<input type="date" name="'. $label . '" id="'. $label . '"></input>';
 		echo '</div>';
 	}
 
-	public function createInputCombo($label, $text, $values) {
+    /**
+     * This function is a dropdown-list with values
+     * @param $label
+     * @param $text
+     * @param $values
+     */
+    public function createInputCombo($label, $text, $values) {
 		echo '<div class="centerColumn">';
 		echo '<label for="'. $label . '">'.$text.'</label>';
 		echo '<select name="'. $label . '" id="'. $label . '">';
@@ -35,7 +59,10 @@ class Factory {
 		echo '</div>';
 	}
 
-	public function createInputRadio() {
+    /**
+     *This following function allow to create a radio button.
+     */
+    public function createInputRadio() {
 		echo '<div class="centerLine" id="selectDino">';
   		echo '<input type="radio" id="tyrex" name="dinotype" value="tyrex" checked>';
   		echo '<label for="tyrex">Tyrex</label>';
@@ -50,7 +77,11 @@ class Factory {
 		echo '<input type="checkbox" name="'. $label . '">';
 	}
 
-	public function createSubmitButton() {
+	/**
+     *The submit button validate the form
+     */
+    public function createSubmitButton() {
+
 		echo '<div class="centerColumn">';
 		echo '<input type="submit" class="inputSubmit" value="Validate"></input>';
 		echo '</div>';

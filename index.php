@@ -8,7 +8,7 @@
 		</div>
 
 		<div>
-			<h4>Story terminées : 15/16</h3>
+			<h4>Story terminées : 15/16</h4>
 			<li>Story 1</li>
 			<li>Story 2</li>
 			<li>Story 3</li>
